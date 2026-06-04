@@ -1,0 +1,160 @@
+@import "tailwindcss" source(none);
+@source "../src";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: "Space Grotesk", "Inter", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-cyan-glow: var(--cyan-glow);
+  --color-purple-glow: var(--purple-glow);
+  --color-pink-glow: var(--pink-glow);
+  --color-blue-glow: var(--blue-glow);
+}
+
+:root {
+  --radius: 1rem;
+
+  /* Futuristic dark palette */
+  --background: oklch(0.12 0.025 260);          /* #070B14-ish */
+  --foreground: oklch(0.98 0.005 250);
+  --card: oklch(0.17 0.03 260);                 /* #101826-ish */
+  --card-foreground: oklch(0.98 0.005 250);
+  --popover: oklch(0.15 0.03 260);
+  --popover-foreground: oklch(0.98 0.005 250);
+
+  --primary: oklch(0.82 0.18 200);              /* cyan */
+  --primary-foreground: oklch(0.1 0.02 260);
+  --secondary: oklch(0.22 0.04 270);
+  --secondary-foreground: oklch(0.98 0.005 250);
+  --muted: oklch(0.2 0.03 260);
+  --muted-foreground: oklch(0.72 0.02 260);
+  --accent: oklch(0.7 0.22 320);                /* magenta/pink */
+  --accent-foreground: oklch(0.98 0.005 250);
+  --destructive: oklch(0.65 0.22 25);
+  --destructive-foreground: oklch(0.98 0.005 250);
+
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 12%);
+  --ring: oklch(0.82 0.18 200);
+
+  --cyan-glow: oklch(0.85 0.18 200);
+  --purple-glow: oklch(0.65 0.22 290);
+  --pink-glow: oklch(0.72 0.22 340);
+  --blue-glow: oklch(0.65 0.22 250);
+
+  --gradient-aurora: linear-gradient(135deg, oklch(0.82 0.18 200) 0%, oklch(0.65 0.22 290) 50%, oklch(0.72 0.22 340) 100%);
+  --gradient-hero: radial-gradient(1200px circle at 20% 10%, oklch(0.65 0.22 290 / 0.35), transparent 50%),
+                   radial-gradient(900px circle at 80% 30%, oklch(0.82 0.18 200 / 0.25), transparent 50%),
+                   radial-gradient(800px circle at 50% 90%, oklch(0.72 0.22 340 / 0.25), transparent 50%);
+  --shadow-glow-cyan: 0 0 40px oklch(0.82 0.18 200 / 0.45);
+  --shadow-glow-pink: 0 0 40px oklch(0.72 0.22 340 / 0.4);
+  --shadow-glass: 0 8px 32px 0 oklch(0 0 0 / 0.45), inset 0 1px 0 0 oklch(1 0 0 / 0.08);
+}
+
+.dark { color-scheme: dark; }
+
+@layer base {
+  * { border-color: var(--color-border); }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  ::selection { background: oklch(0.82 0.18 200 / 0.35); color: white; }
+}
+
+@layer utilities {
+  .glass {
+    background: linear-gradient(135deg, oklch(1 0 0 / 0.06), oklch(1 0 0 / 0.02));
+    backdrop-filter: blur(20px) saturate(140%);
+    -webkit-backdrop-filter: blur(20px) saturate(140%);
+    border: 1px solid oklch(1 0 0 / 0.1);
+    box-shadow: var(--shadow-glass);
+  }
+  .glass-strong {
+    background: linear-gradient(135deg, oklch(1 0 0 / 0.1), oklch(1 0 0 / 0.04));
+    backdrop-filter: blur(28px) saturate(160%);
+    border: 1px solid oklch(1 0 0 / 0.15);
+    box-shadow: var(--shadow-glass);
+  }
+  .text-gradient {
+    background: var(--gradient-aurora);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+  .glow-cyan { box-shadow: var(--shadow-glow-cyan); }
+  .glow-pink { box-shadow: var(--shadow-glow-pink); }
+  .grid-bg {
+    background-image:
+      linear-gradient(oklch(1 0 0 / 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, oklch(1 0 0 / 0.04) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+  .noise::before {
+    content: "";
+    position: absolute; inset: 0; pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/></filter><rect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/></svg>");
+    opacity: 0.04; mix-blend-mode: overlay;
+  }
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-18px); }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 30px oklch(0.82 0.18 200 / 0.4), 0 0 60px oklch(0.72 0.22 340 / 0.25); }
+  50% { box-shadow: 0 0 50px oklch(0.82 0.18 200 / 0.6), 0 0 100px oklch(0.72 0.22 340 / 0.4); }
+}
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+@keyframes blob {
+  0%, 100% { transform: translate(0,0) scale(1); }
+  33% { transform: translate(40px,-30px) scale(1.1); }
+  66% { transform: translate(-30px,30px) scale(0.95); }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.animate-float { animation: float-y 6s ease-in-out infinite; }
+.animate-pulse-glow { animation: pulse-glow 4s ease-in-out infinite; }
+.animate-spin-slow { animation: spin-slow 18s linear infinite; }
+.animate-blob { animation: blob 18s ease-in-out infinite; }
