@@ -321,7 +321,7 @@ function About() {
           /* @__PURE__ */ jsxRuntimeExports.jsxs("h2", { className: "mt-3 font-display text-4xl font-bold md:text-5xl", children: [
             "Creating ",
             /* @__PURE__ */ jsxRuntimeExports.jsx("span", { className: "text-gradient", children: "technology that" }),
-            " imspires & innovates."
+            " inspires & innovates."
           ] }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("p", { className: "mt-6 text-base leading-relaxed text-foreground/80", children: "I'm Harini M, a Computer Science & Design graduate passionate about AR/VR, Python, Flutter, and Web Development. I enjoy building innovative digital experiences that combine creativity and technology to solve real-world problems. Beyond development, I actively lead and contribute to tech communities, fostering collaboration, innovation, and continuous learning. My goal is to create impactful technology that is both meaningful and engaging." }),
           /* @__PURE__ */ jsxRuntimeExports.jsx("ul", { className: "mt-8 grid gap-3 sm:grid-cols-2", children: [
@@ -344,20 +344,20 @@ const education = [
   {
     institution: "Government Engineering College, Kozhikode",
     course: "B.Tech — Computer Science & Design",
-    grade: "CGPA: 8.5 / 10",
+    grade: "CGPA: 8.54",
     period: "2022 — 2026"
   },
   {
-    institution: "Markaz Higher Secondary School",
+    institution: "Ahalia Public School, Palakkad",
     course: "Higher Secondary — Computer Science",
     grade: "Percentage: 92%",
     period: "2020 — 2022"
   },
   {
-    institution: "GVHSS Kondotty",
+    institution: "Guardian International School, Palakkad",
     course: "SSLC — Secondary Schooling",
-    grade: "Grade: A+ (Full A+)",
-    period: "2019 — 2020"
+    grade: "Percentage: 83%",
+    period: "2013 — 2020"
   }
 ];
 const icons = [GraduationCap, BookOpen, Award];
