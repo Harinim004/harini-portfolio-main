@@ -13,20 +13,20 @@ const education: Edu[] = [
   {
     institution: "Government Engineering College, Kozhikode",
     course: "B.Tech — Computer Science & Design",
-    grade: "CGPA: 8.5 / 10",
+    grade: "CGPA: 8.54",
     period: "2022 — 2026",
   },
   {
-    institution: "Markaz Higher Secondary School",
+    institution: "Ahalia Public School, Palakkad",
     course: "Higher Secondary — Computer Science",
     grade: "Percentage: 92%",
     period: "2020 — 2022",
   },
   {
-    institution: "GVHSS Kondotty",
+    institution: "Guardian International School, Palakkad",
     course: "SSLC — Secondary Schooling",
-    grade: "Grade: A+ (Full A+)",
-    period: "2019 — 2020",
+    grade: "Percentage: 83",
+    period: "2013 — 2020",
   },
 ];
 

@@ -83,7 +83,7 @@ export function About() {
         >
           <p className="text-xs uppercase tracking-[0.35em] text-primary">about me</p>
           <h2 className="mt-3 font-display text-4xl font-bold md:text-5xl">
-            Creating <span className="text-gradient">technology that</span> imspires &amp; innovates.
+            Creating <span className="text-gradient">technology that</span> inspires &amp; innovates.
           </h2>
           <p className="mt-6 text-base leading-relaxed text-foreground/80">
             I'm Harini M, a Computer Science & Design graduate passionate about AR/VR, Python, Flutter, and Web Development. I enjoy building innovative digital experiences that combine creativity and technology to solve real-world problems. Beyond development, I actively lead and contribute to tech communities, fostering collaboration, innovation, and continuous learning. My goal is to create impactful technology that is both meaningful and engaging.
