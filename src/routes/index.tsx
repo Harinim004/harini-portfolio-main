@@ -3,6 +3,7 @@ import { Toaster } from "@/components/ui/sonner";
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
+import { Education } from "@/components/portfolio/Education";
 import { Skills } from "@/components/portfolio/Skills";
 import { Projects } from "@/components/portfolio/Projects";
 import { Experience } from "@/components/portfolio/Experience";
@@ -43,6 +44,8 @@ function Index() {
         <Hero />
         <SectionTransition />
         <SectionReveal intensity={1}><About /></SectionReveal>
+        <SectionTransition />
+        <SectionReveal intensity={1}><Education /></SectionReveal>
         <SectionTransition />
         <SectionReveal intensity={0.8}><Skills /></SectionReveal>
         <SectionTransition />

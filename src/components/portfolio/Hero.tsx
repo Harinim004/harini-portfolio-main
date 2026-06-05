@@ -92,9 +92,9 @@ export function Hero() {
           </div>
 
           <div className="mt-10 flex items-center gap-6 text-xs text-muted-foreground">
-            <div><div className="text-2xl font-bold text-gradient">15+</div>Projects shipped</div>
+            <div><div className="text-2xl font-bold text-gradient">10+</div>Projects</div>
             <div><div className="text-2xl font-bold text-gradient">600+</div>AR users engaged</div>
-            <div><div className="text-2xl font-bold text-gradient">7</div>Leadership roles</div>
+            <div><div className="text-2xl font-bold text-gradient">3</div>Leadership roles</div>
           </div>
         </motion.div>
 
