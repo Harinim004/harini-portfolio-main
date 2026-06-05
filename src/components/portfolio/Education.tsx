@@ -25,7 +25,7 @@ const education: Edu[] = [
   {
     institution: "Guardian International School, Palakkad",
     course: "SSLC — Secondary Schooling",
-    grade: "Percentage: 83",
+    grade: "Percentage: 83%",
     period: "2013 — 2020",
   },
 ];
